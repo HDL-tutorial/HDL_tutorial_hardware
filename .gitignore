@@ -1,0 +1,16 @@
+*.log
+*.jou
+*.str
+verilog/vivado
+
+vivado-essentials/fifo_32x512/*
+!vivado-essentials/fifo_32x512/fifo_32x512.xci
+vivado-essentials/fifo_8x2048/*
+!vivado-essentials/fifo_8x2048/fifo_8x2048.xci
+vivado-essentials/vga_fifo/*
+!vivado-essentials/vga_fifo/vga_fifo.xci
+vivado-essentials/vivado_system/*
+!vivado-essentials/vivado_system/vivado_system.bd
+
+!vivado-essentials/vivado-ip/*/*.srcs/sources_1/imports/verilog/*.v
+!vivado-essentials/vivado-ip/*/*.xml
