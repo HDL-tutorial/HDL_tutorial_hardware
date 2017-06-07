@@ -13,8 +13,10 @@ set thepart "xc7z020clg484-1"
 # Set the directory for essentials for Vivado
 set essentials_dir "[file normalize "$origin_dir/../vivado-essentials"]"
 
+set usr_dir "[file normalize "$origin_dir/../userfiles"]"
+
 # Create project
-create_project $proj_name "$proj_dir/"
+create_project -force $proj_name "$proj_dir/"
 
 # Set project properties
 set obj [get_projects $proj_name]
@@ -49,6 +51,19 @@ set files [list \
  $essentials_dir/fifo_8x2048/fifo_8x2048.xci \
  $essentials_dir/fifo_32x512/fifo_32x512.xci \
  $essentials_dir/vivado_system/vivado_system.bd \
+ $usr_dir/verilog/wrapper.v \
+ $usr_dir/verilog/conv_rgb2y.v \
+ $usr_dir/verilog/fixed_three_line_buffer.v \
+ $usr_dir/verilog/control_generator.v \
+ $usr_dir/verilog/binary_counter_11bit.v \
+ $usr_dir/verilog/three_line_buffer.v \
+ $usr_dir/ip/fifo_fwft_32x16/fifo_fwft_32x16.xci \
+ $usr_dir/ip/fifo_fwft_32x4096/fifo_fwft_32x4096.xci \
+ $usr_dir/ip/fifo_fwft_96x16/fifo_fwft_96x16.xci \
+ $usr_dir/ip/c_counter_binary_11bit/c_counter_binary_11bit.xci \
+ $usr_dir/ip/mult_77/mult_77.xci \
+ $usr_dir/ip/mult_150/mult_150.xci \
+ $usr_dir/ip/mult_29/mult_29.xci \
 ]
 add_files -norecurse -fileset $obj $files
 

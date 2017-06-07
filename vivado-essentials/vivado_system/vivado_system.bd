@@ -752,6 +752,12 @@
       </spirit:views>
       <spirit:ports>
         <spirit:port>
+          <spirit:name>FCLK_CLK1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
           <spirit:name>xillybus_host_interrupt</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
@@ -891,12 +897,6 @@
               <spirit:left>31</spirit:left>
               <spirit:right>0</spirit:right>
             </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>FCLK_CLK1</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
       </spirit:ports>
@@ -1278,6 +1278,7 @@
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_CLK1</spirit:name>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="FCLK_CLK1"/>
+        <spirit:externalPortReference spirit:portRef="FCLK_CLK1"/>
         <spirit:internalPortReference spirit:componentRef="xillybus_lite_0" spirit:portRef="S_AXI_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="xillyvga_0" spirit:portRef="m_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="xillybus_ip_0" spirit:portRef="S_AXI_ACLK"/>
@@ -1293,7 +1294,6 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M01_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M02_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M03_ACLK"/>
-        <spirit:externalPortReference spirit:portRef="FCLK_CLK1"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_RESET1_N</spirit:name>
