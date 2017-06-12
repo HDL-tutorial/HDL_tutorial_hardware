@@ -53,6 +53,7 @@ set files [list \
  $usr_dir/verilog/control_generator.v \
  $usr_dir/verilog/fixed_three_line_buffer.v \
  $usr_dir/verilog/conv_rgb2y.v \
+ $usr_dir/verilog/gaussian.v \
  $usr_dir/ip/c_counter_binary_11bit/c_counter_binary_11bit.xci \
  $usr_dir/ip/fifo_fwft_32x16/fifo_fwft_32x16.xci \
  $usr_dir/ip/fifo_fwft_32x4096/fifo_fwft_32x4096.xci \

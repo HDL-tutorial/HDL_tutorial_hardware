@@ -50,6 +50,12 @@ wire [31:0] lb_dlo;
 wire lb_full;
 wire lb_empty;
 
+wire filter_wren;
+wire filter_rden;
+wire [31:0] filter_dout;
+wire filter_full;
+wire filter_empty;
+
 wire fifo_wren;
 wire fifo_full;
 
@@ -58,8 +64,10 @@ assign full = rgb2y_full | fifo_sh_full;
 assign rgb2y_rden = !(rgb2y_empty | fifo_sh_empty | lb_full);
 assign fifo_sh_rden = !(rgb2y_empty | fifo_sh_empty | lb_full);
 assign lb_wren = !(rgb2y_empty | fifo_sh_empty | lb_full);
-assign lb_rden = !(lb_empty | fifo_full);
-assign fifo_wren = !(lb_empty | fifo_full);
+assign lb_rden = !(lb_empty | filter_full);
+assign filter_wren = !(lb_empty | filter_full);
+assign filter_rden = !(filter_empty | fifo_full);
+assign fifo_wren = !(filter_empty | fifo_full);
 
 assign lb_din = (fifo_sh_dout[31:30] == 2'b11) ? fifo_sh_dout : rgb2y_dout;
 
@@ -98,10 +106,23 @@ fixed_three_line_buffer line_buf(
 	.empty(lb_empty)
 );
 
+gaussian gauss(
+	.clk(clk),
+	.srst(srst),
+	.dui(lb_duo[7:0]),
+	.dci(lb_dco[7:0]),
+	.dli(lb_dlo[7:0]),
+	.wr_en(filter_wren),
+	.rd_en(filter_rden),
+	.dout(filter_dout),
+	.full(filter_full),
+	.empty(filter_empty)
+);
+
 fifo_32x512 fifo_32(
 	.clk(clk),
 	.srst(srst),
-	.din({8'h00, lb_dco[7:0], lb_dco[7:0], lb_dco[7:0]}),
+	.din(filter_dout),
 	.wr_en(fifo_wren),
 	.rd_en(rd_en),
 	.dout(dout),
