@@ -1,2 +1,4 @@
 ip/*/*
 !ip/*/*.xci
+
+sim/project/*
