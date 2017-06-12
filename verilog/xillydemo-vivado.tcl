@@ -57,6 +57,7 @@ set files [list \
  $usr_dir/verilog/control_generator.v \
  $usr_dir/verilog/binary_counter_11bit.v \
  $usr_dir/verilog/three_line_buffer.v \
+ $usr_dir/verilog/loopback.v \
  $usr_dir/ip/fifo_fwft_32x16/fifo_fwft_32x16.xci \
  $usr_dir/ip/fifo_fwft_32x4096/fifo_fwft_32x4096.xci \
  $usr_dir/ip/fifo_fwft_96x16/fifo_fwft_96x16.xci \

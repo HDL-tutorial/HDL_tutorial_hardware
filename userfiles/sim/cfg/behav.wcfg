@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="246400001fs"></ZoomEndTime>
+      <ZoomEndTime time="126200001fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="144"></ValueColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="7" />
+   <WVObjectSize size="8" />
    <wvobject fp_name="/fixed_lb_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -192,9 +192,82 @@
          <obj_property name="ObjectShortName">empty</obj_property>
       </wvobject>
    </wvobject>
+   <wvobject fp_name="group69" type="group">
+      <obj_property name="label">loopback</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group61" type="group">
+         <obj_property name="label">Input</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/fixed_lb_tb/wrapper/loopback/din" type="array">
+            <obj_property name="ElementShortName">din[31:0]</obj_property>
+            <obj_property name="ObjectShortName">din[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/fixed_lb_tb/wrapper/loopback/wr_en" type="logic">
+            <obj_property name="ElementShortName">wr_en</obj_property>
+            <obj_property name="ObjectShortName">wr_en</obj_property>
+         </wvobject>
+         <wvobject fp_name="/fixed_lb_tb/wrapper/loopback/full" type="logic">
+            <obj_property name="ElementShortName">full</obj_property>
+            <obj_property name="ObjectShortName">full</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group59" type="group">
+         <obj_property name="label">01</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/fixed_lb_tb/wrapper/loopback/sh_din1" type="array">
+            <obj_property name="ElementShortName">sh_din1[31:0]</obj_property>
+            <obj_property name="ObjectShortName">sh_din1[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/fixed_lb_tb/wrapper/loopback/sh_wren1" type="logic">
+            <obj_property name="ElementShortName">sh_wren1</obj_property>
+            <obj_property name="ObjectShortName">sh_wren1</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group60" type="group">
+         <obj_property name="label">02</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/fixed_lb_tb/wrapper/loopback/sh_din2" type="array">
+            <obj_property name="ElementShortName">sh_din2[31:0]</obj_property>
+            <obj_property name="ObjectShortName">sh_din2[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/fixed_lb_tb/wrapper/loopback/sh_wren2" type="logic">
+            <obj_property name="ElementShortName">sh_wren2</obj_property>
+            <obj_property name="ObjectShortName">sh_wren2</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group68" type="group">
+         <obj_property name="label">fifo</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/fixed_lb_tb/wrapper/loopback/fifo_interface/din" type="array">
+            <obj_property name="ElementShortName">din[31:0]</obj_property>
+            <obj_property name="ObjectShortName">din[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/fixed_lb_tb/wrapper/loopback/fifo_interface/wr_en" type="logic">
+            <obj_property name="ElementShortName">wr_en</obj_property>
+            <obj_property name="ObjectShortName">wr_en</obj_property>
+         </wvobject>
+         <wvobject fp_name="/fixed_lb_tb/wrapper/loopback/fifo_interface/full" type="logic">
+            <obj_property name="ElementShortName">full</obj_property>
+            <obj_property name="ObjectShortName">full</obj_property>
+         </wvobject>
+         <wvobject fp_name="/fixed_lb_tb/wrapper/loopback/fifo_interface/dout" type="array">
+            <obj_property name="ElementShortName">dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/fixed_lb_tb/wrapper/loopback/fifo_interface/rd_en" type="logic">
+            <obj_property name="ElementShortName">rd_en</obj_property>
+            <obj_property name="ObjectShortName">rd_en</obj_property>
+         </wvobject>
+         <wvobject fp_name="/fixed_lb_tb/wrapper/loopback/fifo_interface/empty" type="logic">
+            <obj_property name="ElementShortName">empty</obj_property>
+            <obj_property name="ObjectShortName">empty</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
    <wvobject fp_name="group133" type="group">
       <obj_property name="label">fifo_32</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/fixed_lb_tb/wrapper/fifo_32/din" type="array">
          <obj_property name="ElementShortName">din[31:0]</obj_property>
          <obj_property name="ObjectShortName">din[31:0]</obj_property>
